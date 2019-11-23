@@ -12,9 +12,7 @@ def name_to_feature(name):
     Returns:
         Instance of the loaded class.
     """
-    module_name, class_name  = name.split(".")
-    if not module_name.startswith("mllib.features"):
-        module_name = "mllib.features.{}".format(module_name)
+    module_name, class_name = name.rsplit(".", maxsplit=1)
 
     module = importlib.import_module(module_name)
     cls = getattr(module, class_name)

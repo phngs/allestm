@@ -1,0 +1,1459 @@
+{
+  "config": {
+    "max_length": 1046
+  },
+  "methods": {
+    "blending": {
+      "blending_bfactors_bin": [
+        {
+          "fold": 0,
+          "model_file": "blending_bfactors_bin_0.model",
+          "window_size": -1,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_bfactors_bin_1.model",
+          "window_size": -1,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_bfactors_bin_2.model",
+          "window_size": -1,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_bfactors_bin_3.model",
+          "window_size": -1,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_bfactors_bin_4.model",
+          "window_size": -1,
+          "targets": "binary.Bfactors"
+        }
+      ],
+      "blending_bfactors_cont": [
+        {
+          "fold": 0,
+          "model_file": "blending_bfactors_cont_0.model",
+          "window_size": -1,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_bfactors_cont_1.model",
+          "window_size": -1,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_bfactors_cont_2.model",
+          "window_size": -1,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_bfactors_cont_3.model",
+          "window_size": -1,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_bfactors_cont_4.model",
+          "window_size": -1,
+          "targets": "continuous.Bfactors"
+        }
+      ],
+      "blending_phi": [
+        {
+          "fold": 0,
+          "model_file": "blending_phi_0.model",
+          "window_size": -1,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_phi_1.model",
+          "window_size": -1,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_phi_2.model",
+          "window_size": -1,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_phi_3.model",
+          "window_size": -1,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_phi_4.model",
+          "window_size": -1,
+          "targets": "continuous.PhiAngles"
+        }
+      ],
+      "blending_psi": [
+        {
+          "fold": 0,
+          "model_file": "blending_psi_0.model",
+          "window_size": -1,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_psi_1.model",
+          "window_size": -1,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_psi_2.model",
+          "window_size": -1,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_psi_3.model",
+          "window_size": -1,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_psi_4.model",
+          "window_size": -1,
+          "targets": "continuous.PsiAngles"
+        }
+      ],
+      "blending_rsa_chain": [
+        {
+          "fold": 0,
+          "model_file": "blending_rsa_chain_0.model",
+          "window_size": -1,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_rsa_chain_1.model",
+          "window_size": -1,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_rsa_chain_2.model",
+          "window_size": -1,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_rsa_chain_3.model",
+          "window_size": -1,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_rsa_chain_4.model",
+          "window_size": -1,
+          "targets": "continuous.RsaChain"
+        }
+      ],
+      "blending_rsa_complex": [
+        {
+          "fold": 0,
+          "model_file": "blending_rsa_complex_0.model",
+          "window_size": -1,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_rsa_complex_1.model",
+          "window_size": -1,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_rsa_complex_2.model",
+          "window_size": -1,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_rsa_complex_3.model",
+          "window_size": -1,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_rsa_complex_4.model",
+          "window_size": -1,
+          "targets": "continuous.RsaComplex"
+        }
+      ],
+      "blending_rsa_diff": [
+        {
+          "fold": 0,
+          "model_file": "blending_rsa_diff_0.model",
+          "window_size": -1,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_rsa_diff_1.model",
+          "window_size": -1,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_rsa_diff_2.model",
+          "window_size": -1,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_rsa_diff_3.model",
+          "window_size": -1,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_rsa_diff_4.model",
+          "window_size": -1,
+          "targets": "continuous.RsaDiff"
+        }
+      ],
+      "blending_sec": [
+        {
+          "fold": 0,
+          "model_file": "blending_sec_0.model",
+          "window_size": -1,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_sec_1.model",
+          "window_size": -1,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_sec_2.model",
+          "window_size": -1,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_sec_3.model",
+          "window_size": -1,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_sec_4.model",
+          "window_size": -1,
+          "targets": "categorical.SecStruc"
+        }
+      ],
+      "blending_topo": [
+        {
+          "fold": 0,
+          "model_file": "blending_topo_0.model",
+          "window_size": -1,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_topo_1.model",
+          "window_size": -1,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_topo_2.model",
+          "window_size": -1,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_topo_3.model",
+          "window_size": -1,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_topo_4.model",
+          "window_size": -1,
+          "targets": "categorical.Topology"
+        }
+      ],
+      "blending_zcoords_cont": [
+        {
+          "fold": 0,
+          "model_file": "blending_zcoords_cont_0.model",
+          "window_size": -1,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 1,
+          "model_file": "blending_zcoords_cont_1.model",
+          "window_size": -1,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 2,
+          "model_file": "blending_zcoords_cont_2.model",
+          "window_size": -1,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 3,
+          "model_file": "blending_zcoords_cont_3.model",
+          "window_size": -1,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 4,
+          "model_file": "blending_zcoords_cont_4.model",
+          "window_size": -1,
+          "targets": "continuous.ZCoordinates"
+        }
+      ]
+    },
+    "cnn": {
+      "cnn_domain_angles": [
+        {
+          "fold": 0,
+          "model_file": "cnn_domain_angles_0.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "cnn_domain_angles_1.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "cnn_domain_angles_2.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "cnn_domain_angles_3.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "cnn_domain_angles_4.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        }
+      ],
+      "cnn_domain_bfactors": [
+        {
+          "fold": 0,
+          "model_file": "cnn_domain_bfactors_0.model",
+          "window_size": 21,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "cnn_domain_bfactors_1.model",
+          "window_size": 29,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "cnn_domain_bfactors_2.model",
+          "window_size": 25,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "cnn_domain_bfactors_3.model",
+          "window_size": 29,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "cnn_domain_bfactors_4.model",
+          "window_size": 17,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        }
+      ],
+      "cnn_domain_rsa": [
+        {
+          "fold": 0,
+          "model_file": "cnn_domain_rsa_0.model",
+          "window_size": 9,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 1,
+          "model_file": "cnn_domain_rsa_1.model",
+          "window_size": 9,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 2,
+          "model_file": "cnn_domain_rsa_2.model",
+          "window_size": 5,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 3,
+          "model_file": "cnn_domain_rsa_3.model",
+          "window_size": 9,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 4,
+          "model_file": "cnn_domain_rsa_4.model",
+          "window_size": 9,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        }
+      ],
+      "cnn_domain_zcoords": [
+        {
+          "fold": 0,
+          "model_file": "cnn_domain_zcoords_0.model",
+          "window_size": 29,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 1,
+          "model_file": "cnn_domain_zcoords_1.model",
+          "window_size": 25,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 2,
+          "model_file": "cnn_domain_zcoords_2.model",
+          "window_size": 21,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 3,
+          "model_file": "cnn_domain_zcoords_3.model",
+          "window_size": 25,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 4,
+          "model_file": "cnn_domain_zcoords_4.model",
+          "window_size": 25,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        }
+      ],
+      "cnn_sec": [
+        {
+          "fold": 0,
+          "model_file": "cnn_sec_0.model",
+          "window_size": 9,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 1,
+          "model_file": "cnn_sec_1.model",
+          "window_size": 17,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 2,
+          "model_file": "cnn_sec_2.model",
+          "window_size": 9,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 3,
+          "model_file": "cnn_sec_3.model",
+          "window_size": 13,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 4,
+          "model_file": "cnn_sec_4.model",
+          "window_size": 9,
+          "targets": "categorical.SecStruc"
+        }
+      ]
+    },
+    "dcnn": {
+      "dcnn_domain_angles": [
+        {
+          "fold": 0,
+          "model_file": "dcnn_domain_angles_0.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "dcnn_domain_angles_1.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "dcnn_domain_angles_2.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "dcnn_domain_angles_3.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "dcnn_domain_angles_4.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        }
+      ],
+      "dcnn_domain_bfactors": [
+        {
+          "fold": 0,
+          "model_file": "dcnn_domain_bfactors_0.model",
+          "window_size": 9,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "dcnn_domain_bfactors_1.model",
+          "window_size": 9,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "dcnn_domain_bfactors_2.model",
+          "window_size": 9,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "dcnn_domain_bfactors_3.model",
+          "window_size": 9,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "dcnn_domain_bfactors_4.model",
+          "window_size": 5,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        }
+      ],
+      "dcnn_domain_rsa": [
+        {
+          "fold": 0,
+          "model_file": "dcnn_domain_rsa_0.model",
+          "window_size": 5,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 1,
+          "model_file": "dcnn_domain_rsa_1.model",
+          "window_size": 5,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 2,
+          "model_file": "dcnn_domain_rsa_2.model",
+          "window_size": 5,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 3,
+          "model_file": "dcnn_domain_rsa_3.model",
+          "window_size": 9,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 4,
+          "model_file": "dcnn_domain_rsa_4.model",
+          "window_size": 5,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        }
+      ],
+      "dcnn_domain_zcoords": [
+        {
+          "fold": 0,
+          "model_file": "dcnn_domain_zcoords_0.model",
+          "window_size": 9,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 1,
+          "model_file": "dcnn_domain_zcoords_1.model",
+          "window_size": 5,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 2,
+          "model_file": "dcnn_domain_zcoords_2.model",
+          "window_size": 9,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 3,
+          "model_file": "dcnn_domain_zcoords_3.model",
+          "window_size": 5,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 4,
+          "model_file": "dcnn_domain_zcoords_4.model",
+          "window_size": 5,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        }
+      ],
+      "dcnn_sec": [
+        {
+          "fold": 0,
+          "model_file": "dcnn_sec_0.model",
+          "window_size": 5,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 1,
+          "model_file": "dcnn_sec_1.model",
+          "window_size": 5,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 2,
+          "model_file": "dcnn_sec_2.model",
+          "window_size": 5,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 3,
+          "model_file": "dcnn_sec_3.model",
+          "window_size": 5,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 4,
+          "model_file": "dcnn_sec_4.model",
+          "window_size": 5,
+          "targets": "categorical.SecStruc"
+        }
+      ]
+    },
+    "lstm": {
+      "lstm_domain_angles": [
+        {
+          "fold": 0,
+          "model_file": "lstm_domain_angles_0.model",
+          "window_size": 1,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "lstm_domain_angles_1.model",
+          "window_size": 1,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "lstm_domain_angles_2.model",
+          "window_size": 1,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "lstm_domain_angles_3.model",
+          "window_size": 1,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "lstm_domain_angles_4.model",
+          "window_size": 1,
+          "targets": "continuous.PhiAngles,continuous.PsiAngles"
+        }
+      ],
+      "lstm_domain_bfactors": [
+        {
+          "fold": 0,
+          "model_file": "lstm_domain_bfactors_0.model",
+          "window_size": 1,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "lstm_domain_bfactors_1.model",
+          "window_size": 1,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "lstm_domain_bfactors_2.model",
+          "window_size": 1,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "lstm_domain_bfactors_3.model",
+          "window_size": 1,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "lstm_domain_bfactors_4.model",
+          "window_size": 1,
+          "targets": "continuous.Bfactors,binary.Bfactors"
+        }
+      ],
+      "lstm_domain_rsa": [
+        {
+          "fold": 0,
+          "model_file": "lstm_domain_rsa_0.model",
+          "window_size": 1,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 1,
+          "model_file": "lstm_domain_rsa_1.model",
+          "window_size": 1,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 2,
+          "model_file": "lstm_domain_rsa_2.model",
+          "window_size": 1,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 3,
+          "model_file": "lstm_domain_rsa_3.model",
+          "window_size": 1,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        },
+        {
+          "fold": 4,
+          "model_file": "lstm_domain_rsa_4.model",
+          "window_size": 1,
+          "targets": "continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff"
+        }
+      ],
+      "lstm_domain_zcoords": [
+        {
+          "fold": 0,
+          "model_file": "lstm_domain_zcoords_0.model",
+          "window_size": 1,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 1,
+          "model_file": "lstm_domain_zcoords_1.model",
+          "window_size": 1,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 2,
+          "model_file": "lstm_domain_zcoords_2.model",
+          "window_size": 1,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 3,
+          "model_file": "lstm_domain_zcoords_3.model",
+          "window_size": 1,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        },
+        {
+          "fold": 4,
+          "model_file": "lstm_domain_zcoords_4.model",
+          "window_size": 1,
+          "targets": "continuous.ZCoordinates,categorical.Topology"
+        }
+      ],
+      "lstm_sec": [
+        {
+          "fold": 0,
+          "model_file": "lstm_sec_0.model",
+          "window_size": 1,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 1,
+          "model_file": "lstm_sec_1.model",
+          "window_size": 1,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 2,
+          "model_file": "lstm_sec_2.model",
+          "window_size": 1,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 3,
+          "model_file": "lstm_sec_3.model",
+          "window_size": 1,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 4,
+          "model_file": "lstm_sec_4.model",
+          "window_size": 1,
+          "targets": "categorical.SecStruc"
+        }
+      ]
+    },
+    "rf": {
+      "rf_bfactors_bin": [
+        {
+          "fold": 0,
+          "model_file": "rf_bfactors_bin_0.model",
+          "window_size": 29,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_bfactors_bin_1.model",
+          "window_size": 29,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_bfactors_bin_2.model",
+          "window_size": 9,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_bfactors_bin_3.model",
+          "window_size": 25,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_bfactors_bin_4.model",
+          "window_size": 13,
+          "targets": "binary.Bfactors"
+        }
+      ],
+      "rf_bfactors_cont": [
+        {
+          "fold": 0,
+          "model_file": "rf_bfactors_cont_0.model",
+          "window_size": 25,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_bfactors_cont_1.model",
+          "window_size": 17,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_bfactors_cont_2.model",
+          "window_size": 29,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_bfactors_cont_3.model",
+          "window_size": 9,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_bfactors_cont_4.model",
+          "window_size": 29,
+          "targets": "continuous.Bfactors"
+        }
+      ],
+      "rf_phi": [
+        {
+          "fold": 0,
+          "model_file": "rf_phi_0.model",
+          "window_size": 13,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_phi_1.model",
+          "window_size": 9,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_phi_2.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_phi_3.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_phi_4.model",
+          "window_size": 5,
+          "targets": "continuous.PhiAngles"
+        }
+      ],
+      "rf_psi": [
+        {
+          "fold": 0,
+          "model_file": "rf_psi_0.model",
+          "window_size": 9,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_psi_1.model",
+          "window_size": 9,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_psi_2.model",
+          "window_size": 13,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_psi_3.model",
+          "window_size": 13,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_psi_4.model",
+          "window_size": 9,
+          "targets": "continuous.PsiAngles"
+        }
+      ],
+      "rf_rsa_chain": [
+        {
+          "fold": 0,
+          "model_file": "rf_rsa_chain_0.model",
+          "window_size": 17,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_rsa_chain_1.model",
+          "window_size": 17,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_rsa_chain_2.model",
+          "window_size": 29,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_rsa_chain_3.model",
+          "window_size": 25,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_rsa_chain_4.model",
+          "window_size": 21,
+          "targets": "continuous.RsaChain"
+        }
+      ],
+      "rf_rsa_complex": [
+        {
+          "fold": 0,
+          "model_file": "rf_rsa_complex_0.model",
+          "window_size": 9,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_rsa_complex_1.model",
+          "window_size": 13,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_rsa_complex_2.model",
+          "window_size": 21,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_rsa_complex_3.model",
+          "window_size": 9,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_rsa_complex_4.model",
+          "window_size": 17,
+          "targets": "continuous.RsaComplex"
+        }
+      ],
+      "rf_rsa_diff": [
+        {
+          "fold": 0,
+          "model_file": "rf_rsa_diff_0.model",
+          "window_size": 29,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_rsa_diff_1.model",
+          "window_size": 17,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_rsa_diff_2.model",
+          "window_size": 5,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_rsa_diff_3.model",
+          "window_size": 29,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_rsa_diff_4.model",
+          "window_size": 9,
+          "targets": "continuous.RsaDiff"
+        }
+      ],
+      "rf_sec": [
+        {
+          "fold": 0,
+          "model_file": "rf_sec_0.model",
+          "window_size": 17,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_sec_1.model",
+          "window_size": 9,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_sec_2.model",
+          "window_size": 13,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_sec_3.model",
+          "window_size": 9,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_sec_4.model",
+          "window_size": 5,
+          "targets": "categorical.SecStruc"
+        }
+      ],
+      "rf_topo": [
+        {
+          "fold": 0,
+          "model_file": "rf_topo_0.model",
+          "window_size": 17,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_topo_1.model",
+          "window_size": 21,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_topo_2.model",
+          "window_size": 29,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_topo_3.model",
+          "window_size": 25,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_topo_4.model",
+          "window_size": 25,
+          "targets": "categorical.Topology"
+        }
+      ],
+      "rf_zcoords_cont": [
+        {
+          "fold": 0,
+          "model_file": "rf_zcoords_cont_0.model",
+          "window_size": 29,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 1,
+          "model_file": "rf_zcoords_cont_1.model",
+          "window_size": 29,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 2,
+          "model_file": "rf_zcoords_cont_2.model",
+          "window_size": 29,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 3,
+          "model_file": "rf_zcoords_cont_3.model",
+          "window_size": 25,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 4,
+          "model_file": "rf_zcoords_cont_4.model",
+          "window_size": 17,
+          "targets": "continuous.ZCoordinates"
+        }
+      ]
+    },
+    "xgb": {
+      "xgb_bfactors_bin": [
+        {
+          "fold": 0,
+          "model_file": "xgb_bfactors_bin_0.model",
+          "window_size": 25,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_bfactors_bin_1.model",
+          "window_size": 39,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_bfactors_bin_2.model",
+          "window_size": 25,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_bfactors_bin_3.model",
+          "window_size": 21,
+          "targets": "binary.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_bfactors_bin_4.model",
+          "window_size": 25,
+          "targets": "binary.Bfactors"
+        }
+      ],
+      "xgb_bfactors_cont": [
+        {
+          "fold": 0,
+          "model_file": "xgb_bfactors_cont_0.model",
+          "window_size": 13,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_bfactors_cont_1.model",
+          "window_size": 39,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_bfactors_cont_2.model",
+          "window_size": 39,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_bfactors_cont_3.model",
+          "window_size": 17,
+          "targets": "continuous.Bfactors"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_bfactors_cont_4.model",
+          "window_size": 39,
+          "targets": "continuous.Bfactors"
+        }
+      ],
+      "xgb_phi": [
+        {
+          "fold": 0,
+          "model_file": "xgb_phi_0.model",
+          "window_size": 9,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_phi_1.model",
+          "window_size": 25,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_phi_2.model",
+          "window_size": 13,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_phi_3.model",
+          "window_size": 21,
+          "targets": "continuous.PhiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_phi_4.model",
+          "window_size": 17,
+          "targets": "continuous.PhiAngles"
+        }
+      ],
+      "xgb_psi": [
+        {
+          "fold": 0,
+          "model_file": "xgb_psi_0.model",
+          "window_size": 17,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_psi_1.model",
+          "window_size": 13,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_psi_2.model",
+          "window_size": 13,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_psi_3.model",
+          "window_size": 13,
+          "targets": "continuous.PsiAngles"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_psi_4.model",
+          "window_size": 9,
+          "targets": "continuous.PsiAngles"
+        }
+      ],
+      "xgb_rsa_chain": [
+        {
+          "fold": 0,
+          "model_file": "xgb_rsa_chain_0.model",
+          "window_size": 25,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_rsa_chain_1.model",
+          "window_size": 25,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_rsa_chain_2.model",
+          "window_size": 39,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_rsa_chain_3.model",
+          "window_size": 25,
+          "targets": "continuous.RsaChain"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_rsa_chain_4.model",
+          "window_size": 25,
+          "targets": "continuous.RsaChain"
+        }
+      ],
+      "xgb_rsa_complex": [
+        {
+          "fold": 0,
+          "model_file": "xgb_rsa_complex_0.model",
+          "window_size": 21,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_rsa_complex_1.model",
+          "window_size": 17,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_rsa_complex_2.model",
+          "window_size": 25,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_rsa_complex_3.model",
+          "window_size": 17,
+          "targets": "continuous.RsaComplex"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_rsa_complex_4.model",
+          "window_size": 17,
+          "targets": "continuous.RsaComplex"
+        }
+      ],
+      "xgb_rsa_diff": [
+        {
+          "fold": 0,
+          "model_file": "xgb_rsa_diff_0.model",
+          "window_size": 17,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_rsa_diff_1.model",
+          "window_size": 25,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_rsa_diff_2.model",
+          "window_size": 39,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_rsa_diff_3.model",
+          "window_size": 21,
+          "targets": "continuous.RsaDiff"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_rsa_diff_4.model",
+          "window_size": 9,
+          "targets": "continuous.RsaDiff"
+        }
+      ],
+      "xgb_sec": [
+        {
+          "fold": 0,
+          "model_file": "xgb_sec_0.model",
+          "window_size": 17,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_sec_1.model",
+          "window_size": 17,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_sec_2.model",
+          "window_size": 9,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_sec_3.model",
+          "window_size": 25,
+          "targets": "categorical.SecStruc"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_sec_4.model",
+          "window_size": 39,
+          "targets": "categorical.SecStruc"
+        }
+      ],
+      "xgb_topo": [
+        {
+          "fold": 0,
+          "model_file": "xgb_topo_0.model",
+          "window_size": 39,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_topo_1.model",
+          "window_size": 39,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_topo_2.model",
+          "window_size": 39,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_topo_3.model",
+          "window_size": 39,
+          "targets": "categorical.Topology"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_topo_4.model",
+          "window_size": 39,
+          "targets": "categorical.Topology"
+        }
+      ],
+      "xgb_zcoords_cont": [
+        {
+          "fold": 0,
+          "model_file": "xgb_zcoords_cont_0.model",
+          "window_size": 39,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 1,
+          "model_file": "xgb_zcoords_cont_1.model",
+          "window_size": 21,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 2,
+          "model_file": "xgb_zcoords_cont_2.model",
+          "window_size": 39,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 3,
+          "model_file": "xgb_zcoords_cont_3.model",
+          "window_size": 39,
+          "targets": "continuous.ZCoordinates"
+        },
+        {
+          "fold": 4,
+          "model_file": "xgb_zcoords_cont_4.model",
+          "window_size": 21,
+          "targets": "continuous.ZCoordinates"
+        }
+      ]
+    }
+  }
+}

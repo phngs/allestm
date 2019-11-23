@@ -1,225 +1,225 @@
-blending_bfactors_bin 0 blending_bfactors_bin_0.model -1
-blending_bfactors_bin 1 blending_bfactors_bin_1.model -1
-blending_bfactors_bin 2 blending_bfactors_bin_2.model -1
-blending_bfactors_bin 3 blending_bfactors_bin_3.model -1
-blending_bfactors_bin 4 blending_bfactors_bin_4.model -1
-blending_bfactors_cont 0 blending_bfactors_cont_0.model -1
-blending_bfactors_cont 1 blending_bfactors_cont_1.model -1
-blending_bfactors_cont 2 blending_bfactors_cont_2.model -1
-blending_bfactors_cont 3 blending_bfactors_cont_3.model -1
-blending_bfactors_cont 4 blending_bfactors_cont_4.model -1
-blending_phi 0 blending_phi_0.model -1
-blending_phi 1 blending_phi_1.model -1
-blending_phi 2 blending_phi_2.model -1
-blending_phi 3 blending_phi_3.model -1
-blending_phi 4 blending_phi_4.model -1
-blending_psi 0 blending_psi_0.model -1
-blending_psi 1 blending_psi_1.model -1
-blending_psi 2 blending_psi_2.model -1
-blending_psi 3 blending_psi_3.model -1
-blending_psi 4 blending_psi_4.model -1
-blending_rsa_chain 0 blending_rsa_chain_0.model -1
-blending_rsa_chain 1 blending_rsa_chain_1.model -1
-blending_rsa_chain 2 blending_rsa_chain_2.model -1
-blending_rsa_chain 3 blending_rsa_chain_3.model -1
-blending_rsa_chain 4 blending_rsa_chain_4.model -1
-blending_rsa_complex 0 blending_rsa_complex_0.model -1
-blending_rsa_complex 1 blending_rsa_complex_1.model -1
-blending_rsa_complex 2 blending_rsa_complex_2.model -1
-blending_rsa_complex 3 blending_rsa_complex_3.model -1
-blending_rsa_complex 4 blending_rsa_complex_4.model -1
-blending_rsa_diff 0 blending_rsa_diff_0.model -1
-blending_rsa_diff 1 blending_rsa_diff_1.model -1
-blending_rsa_diff 2 blending_rsa_diff_2.model -1
-blending_rsa_diff 3 blending_rsa_diff_3.model -1
-blending_rsa_diff 4 blending_rsa_diff_4.model -1
-blending_sec 0 blending_sec_0.model -1
-blending_sec 1 blending_sec_1.model -1
-blending_sec 2 blending_sec_2.model -1
-blending_sec 3 blending_sec_3.model -1
-blending_sec 4 blending_sec_4.model -1
-blending_topo 0 blending_topo_0.model -1
-blending_topo 1 blending_topo_1.model -1
-blending_topo 2 blending_topo_2.model -1
-blending_topo 3 blending_topo_3.model -1
-blending_topo 4 blending_topo_4.model -1
-blending_zcoords_cont 0 blending_zcoords_cont_0.model -1
-blending_zcoords_cont 1 blending_zcoords_cont_1.model -1
-blending_zcoords_cont 2 blending_zcoords_cont_2.model -1
-blending_zcoords_cont 3 blending_zcoords_cont_3.model -1
-blending_zcoords_cont 4 blending_zcoords_cont_4.model -1
-cnn_domain_angles 0 cnn_domain_angles_0.model 5
-cnn_domain_angles 1 cnn_domain_angles_1.model 5
-cnn_domain_angles 2 cnn_domain_angles_2.model 5
-cnn_domain_angles 3 cnn_domain_angles_3.model 5
-cnn_domain_angles 4 cnn_domain_angles_4.model 5
-cnn_domain_bfactors 0 cnn_domain_bfactors_0.model 21
-cnn_domain_bfactors 1 cnn_domain_bfactors_1.model 29
-cnn_domain_bfactors 2 cnn_domain_bfactors_2.model 25
-cnn_domain_bfactors 3 cnn_domain_bfactors_3.model 29
-cnn_domain_bfactors 4 cnn_domain_bfactors_4.model 17
-cnn_domain_rsa 0 cnn_domain_rsa_0.model 9
-cnn_domain_rsa 1 cnn_domain_rsa_1.model 9
-cnn_domain_rsa 2 cnn_domain_rsa_2.model 5
-cnn_domain_rsa 3 cnn_domain_rsa_3.model 9
-cnn_domain_rsa 4 cnn_domain_rsa_4.model 9
-cnn_domain_zcoords 0 cnn_domain_zcoords_0.model 29
-cnn_domain_zcoords 1 cnn_domain_zcoords_1.model 25
-cnn_domain_zcoords 2 cnn_domain_zcoords_2.model 21
-cnn_domain_zcoords 3 cnn_domain_zcoords_3.model 25
-cnn_domain_zcoords 4 cnn_domain_zcoords_4.model 25
-cnn_sec 0 cnn_sec_0.model 9
-cnn_sec 1 cnn_sec_1.model 17
-cnn_sec 2 cnn_sec_2.model 9
-cnn_sec 3 cnn_sec_3.model 13
-cnn_sec 4 cnn_sec_4.model 9
-dcnn_domain_angles 0 dcnn_domain_angles_0.model 5
-dcnn_domain_angles 1 dcnn_domain_angles_1.model 5
-dcnn_domain_angles 2 dcnn_domain_angles_2.model 5
-dcnn_domain_angles 3 dcnn_domain_angles_3.model 5
-dcnn_domain_angles 4 dcnn_domain_angles_4.model 5
-dcnn_domain_bfactors 0 dcnn_domain_bfactors_0.model 9
-dcnn_domain_bfactors 1 dcnn_domain_bfactors_1.model 9
-dcnn_domain_bfactors 2 dcnn_domain_bfactors_2.model 9
-dcnn_domain_bfactors 3 dcnn_domain_bfactors_3.model 9
-dcnn_domain_bfactors 4 dcnn_domain_bfactors_4.model 5
-dcnn_domain_rsa 0 dcnn_domain_rsa_0.model 5
-dcnn_domain_rsa 1 dcnn_domain_rsa_1.model 5
-dcnn_domain_rsa 2 dcnn_domain_rsa_2.model 5
-dcnn_domain_rsa 3 dcnn_domain_rsa_3.model 9
-dcnn_domain_rsa 4 dcnn_domain_rsa_4.model 5
-dcnn_domain_zcoords 0 dcnn_domain_zcoords_0.model 9
-dcnn_domain_zcoords 1 dcnn_domain_zcoords_1.model 5
-dcnn_domain_zcoords 2 dcnn_domain_zcoords_2.model 9
-dcnn_domain_zcoords 3 dcnn_domain_zcoords_3.model 5
-dcnn_domain_zcoords 4 dcnn_domain_zcoords_4.model 5
-dcnn_sec 0 dcnn_sec_0.model 5
-dcnn_sec 1 dcnn_sec_1.model 5
-dcnn_sec 2 dcnn_sec_2.model 5
-dcnn_sec 3 dcnn_sec_3.model 5
-dcnn_sec 4 dcnn_sec_4.model 5
-lstm_domain_angles 0 lstm_domain_angles_0.model 1
-lstm_domain_angles 1 lstm_domain_angles_1.model 1
-lstm_domain_angles 2 lstm_domain_angles_2.model 1
-lstm_domain_angles 3 lstm_domain_angles_3.model 1
-lstm_domain_angles 4 lstm_domain_angles_4.model 1
-lstm_domain_bfactors 0 lstm_domain_bfactors_0.model 1
-lstm_domain_bfactors 1 lstm_domain_bfactors_1.model 1
-lstm_domain_bfactors 2 lstm_domain_bfactors_2.model 1
-lstm_domain_bfactors 3 lstm_domain_bfactors_3.model 1
-lstm_domain_bfactors 4 lstm_domain_bfactors_4.model 1
-lstm_domain_rsa 0 lstm_domain_rsa_0.model 1
-lstm_domain_rsa 1 lstm_domain_rsa_1.model 1
-lstm_domain_rsa 2 lstm_domain_rsa_2.model 1
-lstm_domain_rsa 3 lstm_domain_rsa_3.model 1
-lstm_domain_rsa 4 lstm_domain_rsa_4.model 1
-lstm_domain_zcoords 0 lstm_domain_zcoords_0.model 1
-lstm_domain_zcoords 1 lstm_domain_zcoords_1.model 1
-lstm_domain_zcoords 2 lstm_domain_zcoords_2.model 1
-lstm_domain_zcoords 3 lstm_domain_zcoords_3.model 1
-lstm_domain_zcoords 4 lstm_domain_zcoords_4.model 1
-lstm_sec 0 lstm_sec_0.model 1
-lstm_sec 1 lstm_sec_1.model 1
-lstm_sec 2 lstm_sec_2.model 1
-lstm_sec 3 lstm_sec_3.model 1
-lstm_sec 4 lstm_sec_4.model 1
-rf_bfactors_bin 0 rf_bfactors_bin_0.model 29
-rf_bfactors_bin 1 rf_bfactors_bin_1.model 29
-rf_bfactors_bin 2 rf_bfactors_bin_2.model 9
-rf_bfactors_bin 3 rf_bfactors_bin_3.model 25
-rf_bfactors_bin 4 rf_bfactors_bin_4.model 13
-rf_bfactors_cont 0 rf_bfactors_cont_0.model 25
-rf_bfactors_cont 1 rf_bfactors_cont_1.model 17
-rf_bfactors_cont 2 rf_bfactors_cont_2.model 29
-rf_bfactors_cont 3 rf_bfactors_cont_3.model 9
-rf_bfactors_cont 4 rf_bfactors_cont_4.model 29
-rf_phi 0 rf_phi_0.model 13
-rf_phi 1 rf_phi_1.model 9
-rf_phi 2 rf_phi_2.model 5
-rf_phi 3 rf_phi_3.model 5
-rf_phi 4 rf_phi_4.model 5
-rf_psi 0 rf_psi_0.model 9
-rf_psi 1 rf_psi_1.model 9
-rf_psi 2 rf_psi_2.model 13
-rf_psi 3 rf_psi_3.model 13
-rf_psi 4 rf_psi_4.model 9
-rf_rsa_chain 0 rf_rsa_chain_0.model 17
-rf_rsa_chain 1 rf_rsa_chain_1.model 17
-rf_rsa_chain 2 rf_rsa_chain_2.model 29
-rf_rsa_chain 3 rf_rsa_chain_3.model 25
-rf_rsa_chain 4 rf_rsa_chain_4.model 21
-rf_rsa_complex 0 rf_rsa_complex_0.model 9
-rf_rsa_complex 1 rf_rsa_complex_1.model 13
-rf_rsa_complex 2 rf_rsa_complex_2.model 21
-rf_rsa_complex 3 rf_rsa_complex_3.model 9
-rf_rsa_complex 4 rf_rsa_complex_4.model 17
-rf_rsa_diff 0 rf_rsa_diff_0.model 29
-rf_rsa_diff 1 rf_rsa_diff_1.model 17
-rf_rsa_diff 2 rf_rsa_diff_2.model 5
-rf_rsa_diff 3 rf_rsa_diff_3.model 29
-rf_rsa_diff 4 rf_rsa_diff_4.model 9
-rf_sec 0 rf_sec_0.model 17
-rf_sec 1 rf_sec_1.model 9
-rf_sec 2 rf_sec_2.model 13
-rf_sec 3 rf_sec_3.model 9
-rf_sec 4 rf_sec_4.model 5
-rf_topo 0 rf_topo_0.model 17
-rf_topo 1 rf_topo_1.model 21
-rf_topo 2 rf_topo_2.model 29
-rf_topo 3 rf_topo_3.model 25
-rf_topo 4 rf_topo_4.model 25
-rf_zcoords_cont 0 rf_zcoords_cont_0.model 29
-rf_zcoords_cont 1 rf_zcoords_cont_1.model 29
-rf_zcoords_cont 2 rf_zcoords_cont_2.model 29
-rf_zcoords_cont 3 rf_zcoords_cont_3.model 25
-rf_zcoords_cont 4 rf_zcoords_cont_4.model 17
-xgb_bfactors_bin 0 xgb_bfactors_bin_0.model 25
-xgb_bfactors_bin 1 xgb_bfactors_bin_1.model 39
-xgb_bfactors_bin 2 xgb_bfactors_bin_2.model 25
-xgb_bfactors_bin 3 xgb_bfactors_bin_3.model 21
-xgb_bfactors_bin 4 xgb_bfactors_bin_4.model 25
-xgb_bfactors_cont 0 xgb_bfactors_cont_0.model 13
-xgb_bfactors_cont 1 xgb_bfactors_cont_1.model 39
-xgb_bfactors_cont 2 xgb_bfactors_cont_2.model 39
-xgb_bfactors_cont 3 xgb_bfactors_cont_3.model 17
-xgb_bfactors_cont 4 xgb_bfactors_cont_4.model 39
-xgb_phi 0 xgb_phi_0.model 9
-xgb_phi 1 xgb_phi_1.model 25
-xgb_phi 2 xgb_phi_2.model 13
-xgb_phi 3 xgb_phi_3.model 21
-xgb_phi 4 xgb_phi_4.model 17
-xgb_psi 0 xgb_psi_0.model 17
-xgb_psi 1 xgb_psi_1.model 13
-xgb_psi 2 xgb_psi_2.model 13
-xgb_psi 3 xgb_psi_3.model 13
-xgb_psi 4 xgb_psi_4.model 9
-xgb_rsa_chain 0 xgb_rsa_chain_0.model 25
-xgb_rsa_chain 1 xgb_rsa_chain_1.model 25
-xgb_rsa_chain 2 xgb_rsa_chain_2.model 39
-xgb_rsa_chain 3 xgb_rsa_chain_3.model 25
-xgb_rsa_chain 4 xgb_rsa_chain_4.model 25
-xgb_rsa_complex 0 xgb_rsa_complex_0.model 21
-xgb_rsa_complex 1 xgb_rsa_complex_1.model 17
-xgb_rsa_complex 2 xgb_rsa_complex_2.model 25
-xgb_rsa_complex 3 xgb_rsa_complex_3.model 17
-xgb_rsa_complex 4 xgb_rsa_complex_4.model 17
-xgb_rsa_diff 0 xgb_rsa_diff_0.model 17
-xgb_rsa_diff 1 xgb_rsa_diff_1.model 25
-xgb_rsa_diff 2 xgb_rsa_diff_2.model 39
-xgb_rsa_diff 3 xgb_rsa_diff_3.model 21
-xgb_rsa_diff 4 xgb_rsa_diff_4.model 9
-xgb_sec 0 xgb_sec_0.model 17
-xgb_sec 1 xgb_sec_1.model 17
-xgb_sec 2 xgb_sec_2.model 9
-xgb_sec 3 xgb_sec_3.model 25
-xgb_sec 4 xgb_sec_4.model 39
-xgb_topo 0 xgb_topo_0.model 39
-xgb_topo 1 xgb_topo_1.model 39
-xgb_topo 2 xgb_topo_2.model 39
-xgb_topo 3 xgb_topo_3.model 39
-xgb_topo 4 xgb_topo_4.model 39
-xgb_zcoords_cont 0 xgb_zcoords_cont_0.model 39
-xgb_zcoords_cont 1 xgb_zcoords_cont_1.model 21
-xgb_zcoords_cont 2 xgb_zcoords_cont_2.model 39
-xgb_zcoords_cont 3 xgb_zcoords_cont_3.model 39
-xgb_zcoords_cont 4 xgb_zcoords_cont_4.model 21
+blending_bfactors_bin 0 blending_bfactors_bin_0.model -1 binary.Bfactors
+blending_bfactors_bin 1 blending_bfactors_bin_1.model -1 binary.Bfactors
+blending_bfactors_bin 2 blending_bfactors_bin_2.model -1 binary.Bfactors
+blending_bfactors_bin 3 blending_bfactors_bin_3.model -1 binary.Bfactors
+blending_bfactors_bin 4 blending_bfactors_bin_4.model -1 binary.Bfactors
+blending_bfactors_cont 0 blending_bfactors_cont_0.model -1 continuous.Bfactors
+blending_bfactors_cont 1 blending_bfactors_cont_1.model -1 continuous.Bfactors
+blending_bfactors_cont 2 blending_bfactors_cont_2.model -1 continuous.Bfactors
+blending_bfactors_cont 3 blending_bfactors_cont_3.model -1 continuous.Bfactors
+blending_bfactors_cont 4 blending_bfactors_cont_4.model -1 continuous.Bfactors
+blending_phi 0 blending_phi_0.model -1 continuous.PhiAngles
+blending_phi 1 blending_phi_1.model -1 continuous.PhiAngles
+blending_phi 2 blending_phi_2.model -1 continuous.PhiAngles
+blending_phi 3 blending_phi_3.model -1 continuous.PhiAngles
+blending_phi 4 blending_phi_4.model -1 continuous.PhiAngles
+blending_psi 0 blending_psi_0.model -1 continuous.PsiAngles
+blending_psi 1 blending_psi_1.model -1 continuous.PsiAngles
+blending_psi 2 blending_psi_2.model -1 continuous.PsiAngles
+blending_psi 3 blending_psi_3.model -1 continuous.PsiAngles
+blending_psi 4 blending_psi_4.model -1 continuous.PsiAngles
+blending_rsa_chain 0 blending_rsa_chain_0.model -1 continuous.RsaChain
+blending_rsa_chain 1 blending_rsa_chain_1.model -1 continuous.RsaChain
+blending_rsa_chain 2 blending_rsa_chain_2.model -1 continuous.RsaChain
+blending_rsa_chain 3 blending_rsa_chain_3.model -1 continuous.RsaChain
+blending_rsa_chain 4 blending_rsa_chain_4.model -1 continuous.RsaChain
+blending_rsa_complex 0 blending_rsa_complex_0.model -1 continuous.RsaComplex
+blending_rsa_complex 1 blending_rsa_complex_1.model -1 continuous.RsaComplex
+blending_rsa_complex 2 blending_rsa_complex_2.model -1 continuous.RsaComplex
+blending_rsa_complex 3 blending_rsa_complex_3.model -1 continuous.RsaComplex
+blending_rsa_complex 4 blending_rsa_complex_4.model -1 continuous.RsaComplex
+blending_rsa_diff 0 blending_rsa_diff_0.model -1 continuous.RsaDiff
+blending_rsa_diff 1 blending_rsa_diff_1.model -1 continuous.RsaDiff
+blending_rsa_diff 2 blending_rsa_diff_2.model -1 continuous.RsaDiff
+blending_rsa_diff 3 blending_rsa_diff_3.model -1 continuous.RsaDiff
+blending_rsa_diff 4 blending_rsa_diff_4.model -1 continuous.RsaDiff
+blending_sec 0 blending_sec_0.model -1 categorical.SecStruc
+blending_sec 1 blending_sec_1.model -1 categorical.SecStruc
+blending_sec 2 blending_sec_2.model -1 categorical.SecStruc
+blending_sec 3 blending_sec_3.model -1 categorical.SecStruc
+blending_sec 4 blending_sec_4.model -1 categorical.SecStruc
+blending_topo 0 blending_topo_0.model -1 categorical.Topology
+blending_topo 1 blending_topo_1.model -1 categorical.Topology
+blending_topo 2 blending_topo_2.model -1 categorical.Topology
+blending_topo 3 blending_topo_3.model -1 categorical.Topology
+blending_topo 4 blending_topo_4.model -1 categorical.Topology
+blending_zcoords_cont 0 blending_zcoords_cont_0.model -1 continuous.ZCoordinates
+blending_zcoords_cont 1 blending_zcoords_cont_1.model -1 continuous.ZCoordinates
+blending_zcoords_cont 2 blending_zcoords_cont_2.model -1 continuous.ZCoordinates
+blending_zcoords_cont 3 blending_zcoords_cont_3.model -1 continuous.ZCoordinates
+blending_zcoords_cont 4 blending_zcoords_cont_4.model -1 continuous.ZCoordinates
+cnn_domain_angles 0 cnn_domain_angles_0.model 5 continuous.PhiAngles,continuous.PsiAngles
+cnn_domain_angles 1 cnn_domain_angles_1.model 5 continuous.PhiAngles,continuous.PsiAngles
+cnn_domain_angles 2 cnn_domain_angles_2.model 5 continuous.PhiAngles,continuous.PsiAngles
+cnn_domain_angles 3 cnn_domain_angles_3.model 5 continuous.PhiAngles,continuous.PsiAngles
+cnn_domain_angles 4 cnn_domain_angles_4.model 5 continuous.PhiAngles,continuous.PsiAngles
+cnn_domain_bfactors 0 cnn_domain_bfactors_0.model 21 continuous.Bfactors,binary.Bfactors
+cnn_domain_bfactors 1 cnn_domain_bfactors_1.model 29 continuous.Bfactors,binary.Bfactors
+cnn_domain_bfactors 2 cnn_domain_bfactors_2.model 25 continuous.Bfactors,binary.Bfactors
+cnn_domain_bfactors 3 cnn_domain_bfactors_3.model 29 continuous.Bfactors,binary.Bfactors
+cnn_domain_bfactors 4 cnn_domain_bfactors_4.model 17 continuous.Bfactors,binary.Bfactors
+cnn_domain_rsa 0 cnn_domain_rsa_0.model 9 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+cnn_domain_rsa 1 cnn_domain_rsa_1.model 9 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+cnn_domain_rsa 2 cnn_domain_rsa_2.model 5 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+cnn_domain_rsa 3 cnn_domain_rsa_3.model 9 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+cnn_domain_rsa 4 cnn_domain_rsa_4.model 9 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+cnn_domain_zcoords 0 cnn_domain_zcoords_0.model 29 continuous.ZCoordinates,categorical.Topology
+cnn_domain_zcoords 1 cnn_domain_zcoords_1.model 25 continuous.ZCoordinates,categorical.Topology
+cnn_domain_zcoords 2 cnn_domain_zcoords_2.model 21 continuous.ZCoordinates,categorical.Topology
+cnn_domain_zcoords 3 cnn_domain_zcoords_3.model 25 continuous.ZCoordinates,categorical.Topology
+cnn_domain_zcoords 4 cnn_domain_zcoords_4.model 25 continuous.ZCoordinates,categorical.Topology
+cnn_sec 0 cnn_sec_0.model 9 categorical.SecStruc
+cnn_sec 1 cnn_sec_1.model 17 categorical.SecStruc
+cnn_sec 2 cnn_sec_2.model 9 categorical.SecStruc
+cnn_sec 3 cnn_sec_3.model 13 categorical.SecStruc
+cnn_sec 4 cnn_sec_4.model 9 categorical.SecStruc
+dcnn_domain_angles 0 dcnn_domain_angles_0.model 5 continuous.PhiAngles,continuous.PsiAngles
+dcnn_domain_angles 1 dcnn_domain_angles_1.model 5 continuous.PhiAngles,continuous.PsiAngles
+dcnn_domain_angles 2 dcnn_domain_angles_2.model 5 continuous.PhiAngles,continuous.PsiAngles
+dcnn_domain_angles 3 dcnn_domain_angles_3.model 5 continuous.PhiAngles,continuous.PsiAngles
+dcnn_domain_angles 4 dcnn_domain_angles_4.model 5 continuous.PhiAngles,continuous.PsiAngles
+dcnn_domain_bfactors 0 dcnn_domain_bfactors_0.model 9 continuous.Bfactors,binary.Bfactors
+dcnn_domain_bfactors 1 dcnn_domain_bfactors_1.model 9 continuous.Bfactors,binary.Bfactors
+dcnn_domain_bfactors 2 dcnn_domain_bfactors_2.model 9 continuous.Bfactors,binary.Bfactors
+dcnn_domain_bfactors 3 dcnn_domain_bfactors_3.model 9 continuous.Bfactors,binary.Bfactors
+dcnn_domain_bfactors 4 dcnn_domain_bfactors_4.model 5 continuous.Bfactors,binary.Bfactors
+dcnn_domain_rsa 0 dcnn_domain_rsa_0.model 5 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+dcnn_domain_rsa 1 dcnn_domain_rsa_1.model 5 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+dcnn_domain_rsa 2 dcnn_domain_rsa_2.model 5 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+dcnn_domain_rsa 3 dcnn_domain_rsa_3.model 9 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+dcnn_domain_rsa 4 dcnn_domain_rsa_4.model 5 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+dcnn_domain_zcoords 0 dcnn_domain_zcoords_0.model 9 continuous.ZCoordinates,categorical.Topology
+dcnn_domain_zcoords 1 dcnn_domain_zcoords_1.model 5 continuous.ZCoordinates,categorical.Topology
+dcnn_domain_zcoords 2 dcnn_domain_zcoords_2.model 9 continuous.ZCoordinates,categorical.Topology
+dcnn_domain_zcoords 3 dcnn_domain_zcoords_3.model 5 continuous.ZCoordinates,categorical.Topology
+dcnn_domain_zcoords 4 dcnn_domain_zcoords_4.model 5 continuous.ZCoordinates,categorical.Topology
+dcnn_sec 0 dcnn_sec_0.model 5 categorical.SecStruc
+dcnn_sec 1 dcnn_sec_1.model 5 categorical.SecStruc
+dcnn_sec 2 dcnn_sec_2.model 5 categorical.SecStruc
+dcnn_sec 3 dcnn_sec_3.model 5 categorical.SecStruc
+dcnn_sec 4 dcnn_sec_4.model 5 categorical.SecStruc
+lstm_domain_angles 0 lstm_domain_angles_0.model 1 continuous.PhiAngles,continuous.PsiAngles
+lstm_domain_angles 1 lstm_domain_angles_1.model 1 continuous.PhiAngles,continuous.PsiAngles
+lstm_domain_angles 2 lstm_domain_angles_2.model 1 continuous.PhiAngles,continuous.PsiAngles
+lstm_domain_angles 3 lstm_domain_angles_3.model 1 continuous.PhiAngles,continuous.PsiAngles
+lstm_domain_angles 4 lstm_domain_angles_4.model 1 continuous.PhiAngles,continuous.PsiAngles
+lstm_domain_bfactors 0 lstm_domain_bfactors_0.model 1 continuous.Bfactors,binary.Bfactors
+lstm_domain_bfactors 1 lstm_domain_bfactors_1.model 1 continuous.Bfactors,binary.Bfactors
+lstm_domain_bfactors 2 lstm_domain_bfactors_2.model 1 continuous.Bfactors,binary.Bfactors
+lstm_domain_bfactors 3 lstm_domain_bfactors_3.model 1 continuous.Bfactors,binary.Bfactors
+lstm_domain_bfactors 4 lstm_domain_bfactors_4.model 1 continuous.Bfactors,binary.Bfactors
+lstm_domain_rsa 0 lstm_domain_rsa_0.model 1 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+lstm_domain_rsa 1 lstm_domain_rsa_1.model 1 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+lstm_domain_rsa 2 lstm_domain_rsa_2.model 1 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+lstm_domain_rsa 3 lstm_domain_rsa_3.model 1 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+lstm_domain_rsa 4 lstm_domain_rsa_4.model 1 continuous.RsaComplex,continuous.RsaChain,continuous.RsaDiff
+lstm_domain_zcoords 0 lstm_domain_zcoords_0.model 1 continuous.ZCoordinates,categorical.Topology
+lstm_domain_zcoords 1 lstm_domain_zcoords_1.model 1 continuous.ZCoordinates,categorical.Topology
+lstm_domain_zcoords 2 lstm_domain_zcoords_2.model 1 continuous.ZCoordinates,categorical.Topology
+lstm_domain_zcoords 3 lstm_domain_zcoords_3.model 1 continuous.ZCoordinates,categorical.Topology
+lstm_domain_zcoords 4 lstm_domain_zcoords_4.model 1 continuous.ZCoordinates,categorical.Topology
+lstm_sec 0 lstm_sec_0.model 1 categorical.SecStruc
+lstm_sec 1 lstm_sec_1.model 1 categorical.SecStruc
+lstm_sec 2 lstm_sec_2.model 1 categorical.SecStruc
+lstm_sec 3 lstm_sec_3.model 1 categorical.SecStruc
+lstm_sec 4 lstm_sec_4.model 1 categorical.SecStruc
+rf_bfactors_bin 0 rf_bfactors_bin_0.model 29 binary.Bfactors
+rf_bfactors_bin 1 rf_bfactors_bin_1.model 29 binary.Bfactors
+rf_bfactors_bin 2 rf_bfactors_bin_2.model 9 binary.Bfactors
+rf_bfactors_bin 3 rf_bfactors_bin_3.model 25 binary.Bfactors
+rf_bfactors_bin 4 rf_bfactors_bin_4.model 13 binary.Bfactors
+rf_bfactors_cont 0 rf_bfactors_cont_0.model 25 continuous.Bfactors
+rf_bfactors_cont 1 rf_bfactors_cont_1.model 17 continuous.Bfactors
+rf_bfactors_cont 2 rf_bfactors_cont_2.model 29 continuous.Bfactors
+rf_bfactors_cont 3 rf_bfactors_cont_3.model 9 continuous.Bfactors
+rf_bfactors_cont 4 rf_bfactors_cont_4.model 29 continuous.Bfactors
+rf_phi 0 rf_phi_0.model 13 continuous.PhiAngles
+rf_phi 1 rf_phi_1.model 9 continuous.PhiAngles
+rf_phi 2 rf_phi_2.model 5 continuous.PhiAngles
+rf_phi 3 rf_phi_3.model 5 continuous.PhiAngles
+rf_phi 4 rf_phi_4.model 5 continuous.PhiAngles
+rf_psi 0 rf_psi_0.model 9 continuous.PsiAngles
+rf_psi 1 rf_psi_1.model 9 continuous.PsiAngles
+rf_psi 2 rf_psi_2.model 13 continuous.PsiAngles
+rf_psi 3 rf_psi_3.model 13 continuous.PsiAngles
+rf_psi 4 rf_psi_4.model 9 continuous.PsiAngles
+rf_rsa_chain 0 rf_rsa_chain_0.model 17 continuous.RsaChain
+rf_rsa_chain 1 rf_rsa_chain_1.model 17 continuous.RsaChain
+rf_rsa_chain 2 rf_rsa_chain_2.model 29 continuous.RsaChain
+rf_rsa_chain 3 rf_rsa_chain_3.model 25 continuous.RsaChain
+rf_rsa_chain 4 rf_rsa_chain_4.model 21 continuous.RsaChain
+rf_rsa_complex 0 rf_rsa_complex_0.model 9 continuous.RsaComplex
+rf_rsa_complex 1 rf_rsa_complex_1.model 13 continuous.RsaComplex
+rf_rsa_complex 2 rf_rsa_complex_2.model 21 continuous.RsaComplex
+rf_rsa_complex 3 rf_rsa_complex_3.model 9 continuous.RsaComplex
+rf_rsa_complex 4 rf_rsa_complex_4.model 17 continuous.RsaComplex
+rf_rsa_diff 0 rf_rsa_diff_0.model 29 continuous.RsaDiff
+rf_rsa_diff 1 rf_rsa_diff_1.model 17 continuous.RsaDiff
+rf_rsa_diff 2 rf_rsa_diff_2.model 5 continuous.RsaDiff
+rf_rsa_diff 3 rf_rsa_diff_3.model 29 continuous.RsaDiff
+rf_rsa_diff 4 rf_rsa_diff_4.model 9 continuous.RsaDiff
+rf_sec 0 rf_sec_0.model 17 categorical.SecStruc
+rf_sec 1 rf_sec_1.model 9 categorical.SecStruc
+rf_sec 2 rf_sec_2.model 13 categorical.SecStruc
+rf_sec 3 rf_sec_3.model 9 categorical.SecStruc
+rf_sec 4 rf_sec_4.model 5 categorical.SecStruc
+rf_topo 0 rf_topo_0.model 17 categorical.Topology
+rf_topo 1 rf_topo_1.model 21 categorical.Topology
+rf_topo 2 rf_topo_2.model 29 categorical.Topology
+rf_topo 3 rf_topo_3.model 25 categorical.Topology
+rf_topo 4 rf_topo_4.model 25 categorical.Topology
+rf_zcoords_cont 0 rf_zcoords_cont_0.model 29 continuous.ZCoordinates
+rf_zcoords_cont 1 rf_zcoords_cont_1.model 29 continuous.ZCoordinates
+rf_zcoords_cont 2 rf_zcoords_cont_2.model 29 continuous.ZCoordinates
+rf_zcoords_cont 3 rf_zcoords_cont_3.model 25 continuous.ZCoordinates
+rf_zcoords_cont 4 rf_zcoords_cont_4.model 17 continuous.ZCoordinates
+xgb_bfactors_bin 0 xgb_bfactors_bin_0.model 25 binary.Bfactors
+xgb_bfactors_bin 1 xgb_bfactors_bin_1.model 39 binary.Bfactors
+xgb_bfactors_bin 2 xgb_bfactors_bin_2.model 25 binary.Bfactors
+xgb_bfactors_bin 3 xgb_bfactors_bin_3.model 21 binary.Bfactors
+xgb_bfactors_bin 4 xgb_bfactors_bin_4.model 25 binary.Bfactors
+xgb_bfactors_cont 0 xgb_bfactors_cont_0.model 13 continuous.Bfactors
+xgb_bfactors_cont 1 xgb_bfactors_cont_1.model 39 continuous.Bfactors
+xgb_bfactors_cont 2 xgb_bfactors_cont_2.model 39 continuous.Bfactors
+xgb_bfactors_cont 3 xgb_bfactors_cont_3.model 17 continuous.Bfactors
+xgb_bfactors_cont 4 xgb_bfactors_cont_4.model 39 continuous.Bfactors
+xgb_phi 0 xgb_phi_0.model 9 continuous.PhiAngles
+xgb_phi 1 xgb_phi_1.model 25 continuous.PhiAngles
+xgb_phi 2 xgb_phi_2.model 13 continuous.PhiAngles
+xgb_phi 3 xgb_phi_3.model 21 continuous.PhiAngles
+xgb_phi 4 xgb_phi_4.model 17 continuous.PhiAngles
+xgb_psi 0 xgb_psi_0.model 17 continuous.PsiAngles
+xgb_psi 1 xgb_psi_1.model 13 continuous.PsiAngles
+xgb_psi 2 xgb_psi_2.model 13 continuous.PsiAngles
+xgb_psi 3 xgb_psi_3.model 13 continuous.PsiAngles
+xgb_psi 4 xgb_psi_4.model 9 continuous.PsiAngles
+xgb_rsa_chain 0 xgb_rsa_chain_0.model 25 continuous.RsaChain
+xgb_rsa_chain 1 xgb_rsa_chain_1.model 25 continuous.RsaChain
+xgb_rsa_chain 2 xgb_rsa_chain_2.model 39 continuous.RsaChain
+xgb_rsa_chain 3 xgb_rsa_chain_3.model 25 continuous.RsaChain
+xgb_rsa_chain 4 xgb_rsa_chain_4.model 25 continuous.RsaChain
+xgb_rsa_complex 0 xgb_rsa_complex_0.model 21 continuous.RsaComplex
+xgb_rsa_complex 1 xgb_rsa_complex_1.model 17 continuous.RsaComplex
+xgb_rsa_complex 2 xgb_rsa_complex_2.model 25 continuous.RsaComplex
+xgb_rsa_complex 3 xgb_rsa_complex_3.model 17 continuous.RsaComplex
+xgb_rsa_complex 4 xgb_rsa_complex_4.model 17 continuous.RsaComplex
+xgb_rsa_diff 0 xgb_rsa_diff_0.model 17 continuous.RsaDiff
+xgb_rsa_diff 1 xgb_rsa_diff_1.model 25 continuous.RsaDiff
+xgb_rsa_diff 2 xgb_rsa_diff_2.model 39 continuous.RsaDiff
+xgb_rsa_diff 3 xgb_rsa_diff_3.model 21 continuous.RsaDiff
+xgb_rsa_diff 4 xgb_rsa_diff_4.model 9 continuous.RsaDiff
+xgb_sec 0 xgb_sec_0.model 17 categorical.SecStruc
+xgb_sec 1 xgb_sec_1.model 17 categorical.SecStruc
+xgb_sec 2 xgb_sec_2.model 9 categorical.SecStruc
+xgb_sec 3 xgb_sec_3.model 25 categorical.SecStruc
+xgb_sec 4 xgb_sec_4.model 39 categorical.SecStruc
+xgb_topo 0 xgb_topo_0.model 39 categorical.Topology
+xgb_topo 1 xgb_topo_1.model 39 categorical.Topology
+xgb_topo 2 xgb_topo_2.model 39 categorical.Topology
+xgb_topo 3 xgb_topo_3.model 39 categorical.Topology
+xgb_topo 4 xgb_topo_4.model 39 categorical.Topology
+xgb_zcoords_cont 0 xgb_zcoords_cont_0.model 39 continuous.ZCoordinates
+xgb_zcoords_cont 1 xgb_zcoords_cont_1.model 21 continuous.ZCoordinates
+xgb_zcoords_cont 2 xgb_zcoords_cont_2.model 39 continuous.ZCoordinates
+xgb_zcoords_cont 3 xgb_zcoords_cont_3.model 39 continuous.ZCoordinates
+xgb_zcoords_cont 4 xgb_zcoords_cont_4.model 21 continuous.ZCoordinates

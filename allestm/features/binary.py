@@ -4,7 +4,7 @@ Module containing binary input features as well as output targets.
 from sklearn.base import TransformerMixin
 from sklearn.preprocessing import StandardScaler, Binarizer
 
-from mllib.features.base import LengthMixin, NoFitMixin
+from allestm.features.base import LengthMixin, NoFitMixin
 
 
 class Binary:

@@ -12,7 +12,7 @@ from sklearn.base import TransformerMixin
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-from mllib.features.base import NoFitMixin, LengthMixin
+from allestm.features.base import NoFitMixin, LengthMixin
 
 
 class Continuous:
@@ -143,96 +143,12 @@ class PropertiesCont(TransformerMixin, NoFitMixin, LengthMixin, Continuous):
         return result
 
 
-class Pssm2(TransformerMixin, NoFitMixin, LengthMixin, Continuous):
-    """
-    PSSM matrix calculated from a MSA.
-    """
-    _aas = ('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V', '-')
-    _aas_regex = r'[^'+''.join(_aas)+']'
-
-    length = len(_aas[:-1])
-    query = 'SELECT msa FROM alignments where id=?'
-
-    @classmethod
-    def transform(cls, x):
-        """
-        Transforms the [1, 1]-shaped NumPy array to a [n, 21]-shaped one representing
-        the PSSM.
-
-        Args:
-            x: [1,1]-shaped NumPy array containing the alignment in fasta format as a binary str.
-            If the array is longer in any dimension, these are ignored.
-
-        Returns:
-            [n, 21]-shaped NumPy array representing the PSSM.
-        """
-        # Uppercase all letters and remove headers.
-        msa = [row.upper() for row in x[0, 0].strip().split('\n') if not row.startswith('>')]
-        non_gap_indices = np.argwhere(np.array(list(msa[0])) != '-').squeeze()
-        msa = [re.sub(cls._aas_regex, '-', row) for row in msa]
-
-        # Counting
-        col_counters_ori = [{aa: 0 for aa in cls._aas} for _ in range(len(msa[0]))]
-        for row_index, row in enumerate(msa):
-            for col_index, aa in enumerate(row):
-                col_counters_ori[col_index][aa] += 1
-
-        # Weights
-        weights = np.zeros((len(msa), ))
-        rs = [sum([1 for k, v in col_counters_ori[col_index].items() if v > 0]) for col_index in range(len(msa[0]))]
-        for row_index, row in enumerate(msa):
-            for col_index, aa in enumerate(row):
-                r = rs[col_index]
-                s = col_counters_ori[col_index][aa]
-                if r > 1:
-                    weights[row_index] += 1 / (r * s)
-
-        # Counting with weights
-        col_counters_wt = [{aa: 0 for aa in cls._aas} for _ in range(len(msa[0]))]
-        background_counter = {aa: 0 for aa in cls._aas}
-        for row_index, row in enumerate(msa):
-            for col_index, aa in enumerate(row):
-                col_counters_wt[col_index][aa] += 1#weights[row_index]
-                background_counter[aa] += 1#weights[row_index]
-
-        # Redistributing gaps
-        # Add pseudocounts
-        total_aas = sum([sum(col_counter[aa] for aa in cls._aas[:-1]) for col_counter in col_counters_wt])
-        background_freqs = {aa: background_counter[aa]/total_aas for aa in cls._aas[:-1]}
-
-        pssm = np.zeros((len(msa[0]), len(cls._aas[:-1])))
-        for col_index, col_counter in enumerate(col_counters_wt):
-            for aa_index, aa in enumerate(cls._aas[:-1]):
-                pssm[col_index, aa_index] = col_counter[aa] + 1 #+ col_counter['-'] * background_freqs[aa]
-                #col_counter[aa] += col_counter['-'] * background_freqs[aa] + 1
-                #pssm[col_index, aa_index] = col_counter[aa]
-
-        #for col_counter in col_counters_wt:
-            #for aa in cls._aas[:-1]:
-                #col_counter[aa] += 1
-
-        # Pssm
-        #for col_index, col_counter in enumerate(col_counters_wt):
-            #for aa_index, aa in enumerate(cls._aas[:-1]):
-                #pssm[col_index, aa_index] = col_counter[aa]
-
-        total = np.sum(pssm)
-        row_totals = np.sum(pssm, axis=1)
-        col_totals = np.sum(pssm, axis=0)
-        pssm /= row_totals[..., None]
-        col_totals /= total
-        pssm /= col_totals
-        pssm = np.log2(pssm) / 2
-        pssm = pssm[non_gap_indices]
-
-        return np.tanh(pssm)
-
-
 class Pssm(TransformerMixin, NoFitMixin, LengthMixin, Continuous):
     """
     PSSM matrix calculated from a MSA.
     """
-    _aas = ('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')#, '-')
+    _aas = ('A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I', 'L',
+            'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V')  # , '-')
     _aa2index = {aa: index for index, aa in enumerate(_aas)}
 
     length = len(_aas)
@@ -252,7 +168,8 @@ class Pssm(TransformerMixin, NoFitMixin, LengthMixin, Continuous):
             [n, 20]-shaped NumPy array representing the PSSM.
         """
         # Remove lowercase letters (gaps in query), remove headers
-        msa = [re.sub('[a-z]', '', row) for row in x[0, 0].strip().split('\n') if not row.startswith('>')]
+        msa = [re.sub('[a-z]', '', row)
+               for row in x[0, 0].strip().split('\n') if not row.startswith('>')]
 
         # Transpose alignment (rows to cols)
         msa = list(map(list, zip(*msa)))
@@ -266,16 +183,20 @@ class Pssm(TransformerMixin, NoFitMixin, LengthMixin, Continuous):
             col_counter.update(col)
             background_counter.update(col_counter)
 
-            col_total_aas = sum([v for k, v in col_counter.items() if k in cls._aa2index])
+            col_total_aas = sum(
+                [v for k, v in col_counter.items() if k in cls._aa2index])
             for aa, aa_index in cls._aa2index.items():
                 pssm[col_index, aa_index] = col_counter[aa] / col_total_aas
 
         # Calculate log ratios and normalize using tanh.
-        background_total_aas = sum([v for k, v in background_counter.items() if k in cls._aa2index])
+        background_total_aas = sum(
+            [v for k, v in background_counter.items() if k in cls._aa2index])
         for col_index in range(len(msa)):
             for aa, aa_index in cls._aa2index.items():
-                pssm[col_index, aa_index] /= background_counter[aa] / background_total_aas
-                pssm[col_index, aa_index] = cls._normalize(pssm[col_index, aa_index])
+                pssm[col_index, aa_index] /= background_counter[aa] / \
+                    background_total_aas
+                pssm[col_index, aa_index] = cls._normalize(
+                    pssm[col_index, aa_index])
 
         return pssm
 
@@ -321,7 +242,8 @@ class ZCoordinates(TransformerMixin, NoFitMixin, LengthMixin, Continuous):
         return np.vectorize(self._transform_func)(x)
 
     def _inverse_transform_func(self, v):
-        v = self.lower_bound + (((v + 1) * (self.upper_bound - self.lower_bound)) / 2)
+        v = self.lower_bound + \
+            (((v + 1) * (self.upper_bound - self.lower_bound)) / 2)
         return max(self.lower_bound, min(self.upper_bound, v))
 
     def inverse_transform(self, x):
@@ -347,7 +269,8 @@ class Bfactors(TransformerMixin, LengthMixin, NoFitMixin, Continuous):
     query = 'SELECT bfactor FROM raw_data WHERE id=? ORDER BY resi'
 
     def __init__(self, with_mean=True, with_std=True, copy=True):
-        self.standard_scaler = StandardScaler(with_mean=with_mean, with_std=with_std, copy=copy)
+        self.standard_scaler = StandardScaler(
+            with_mean=with_mean, with_std=with_std, copy=copy)
 
     def transform(self, x):
         """
@@ -395,7 +318,7 @@ class Angles(TransformerMixin, NoFitMixin, LengthMixin, Continuous):
 
         """
         return np.vectorize(lambda v: max(min(v, 1.0), -1.0) * 180.0)(x)
-        #return np.vectorize(lambda v: max(min(v, 1.0), -1.0) * math.pi)(x)
+        # return np.vectorize(lambda v: max(min(v, 1.0), -1.0) * math.pi)(x)
 
 
 class PhiAngles(Angles, LengthMixin):
@@ -432,4 +355,3 @@ class Thickness(TransformerMixin, NoFitMixin, LengthMixin, Continuous):
 
         """
         return x
-

@@ -4,7 +4,7 @@ Module containing categorical input features as well as output targets.
 from sklearn.base import TransformerMixin
 import numpy as np
 
-from mllib.features.base import NoFitMixin, LengthMixin
+from allestm.features.base import NoFitMixin, LengthMixin
 
 
 class Categorical:
