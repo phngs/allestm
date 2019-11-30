@@ -1,6 +1,8 @@
 {
   "config": {
-    "max_length": 1046
+    "s3_path": "https://allestm-models.s3-eu-west-1.amazonaws.com/",
+    "max_length": 1046,
+    "folds": 5
   },
   "methods": {
     "blending": {
