@@ -21,16 +21,24 @@ from sklearn.linear_model import LinearRegression, LogisticRegression
 
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 log = logging.getLogger()
 
 
 def parse_args(argv):
     parser = ArgumentParser(description='')
-    parser.add_argument('-f', '--fasta', help='Single sequence .fasta file.')
-    parser.add_argument('-a', '--a3m', help='MSA in a3m format.')
+    parser.add_argument('a3m', help='MSA in a3m format.')
+    parser.add_argument('out', help='Output file (JSON).')
+
+    parser.add_argument('-m', '--model-dir', default='./models', help='Model dir.')
     parser.add_argument('-c', '--config', help='Config file.')
+
+    parser.add_argument('-d', '--decimals', type=int, default=3, help='Number of decimals the final result is rounded to.')
+    parser.add_argument('-l', '--no-dl', action='store_true', help='Do NOT use deep learning models')
+    parser.add_argument('-r', '--no-rf', action='store_true', help='Do NOT use rf models')
+    parser.add_argument('-x', '--no-xgb', action='store_true', help='Do NOT use xgb models')
     return parser.parse_args(argv)
+
 
 def prepare_data(seq, pssm, window=0):
     feature_dfs = []
@@ -53,34 +61,28 @@ def prepare_data(seq, pssm, window=0):
 def main():
     args = parse_args(sys.argv[1:])
 
+    model_dir = args.model_dir
+
     # Parsing config.
     log.debug('Parsing config file.')
     with open(args.config, 'r') as config_fh:
         config = json.load(config_fh)
 
-    # Parsing fasta file.
-    log.debug('Parsing fasta.')
-    fasta = allestm.parsers.parse_fasta(args.fasta)
+    # Parsing a3m file.
+    log.debug('Parsing a3m.')
+    fasta, a3m = allestm.parsers.parse_a3m(args.a3m)
+    print(fasta)
+
     seq_transformer = allestm.features.categorical.Sequence()
     seq = seq_transformer.transform(fasta)
 
-    # Parsing a3m file.
-    log.debug('Parsing a3m.')
-    a3m = allestm.parsers.parse_a3m(args.a3m)
     pssm_transformer = allestm.features.continuous.Pssm()
     pssm = pssm_transformer.transform(a3m)
 
-    # Cache: cache[FOLD][METHOD][TARGET] = PREDICTIONS.
     results = {}
 
-    do_dl = False
-    do_rf = False
-    do_xgb = False
-    do_blending = True
-    do_avg = True
-
     # DL.
-    if do_dl:
+    if not args.no_dl and False:
         def run_dl(seq, pssm, model_file, queue):
             model = keras.models.load_model(model_file)
             predictions = model.predict([dl_seq_data, dl_pssm_data])
@@ -98,11 +100,13 @@ def main():
             for target_group in config['methods'][method]:
                 log.debug(f'Target group {target_group}.')
 
-                for model_config in config['methods'][method][target_group]:
+                for i, model_config in enumerate(config['methods'][method][target_group]):
+                    log.info(f'Running model {i+1} of {len(config["methods"][method][target_group])} for method {method} and target {model_config["targets"]}')
+
                     log.debug(f'Model config: {model_config}.')
                     queue = multiprocessing.SimpleQueue()
 
-                    model_file = f'models/{model_config["model_file"]}'
+                    model_file = f'{model_dir}/{model_config["model_file"]}'
                     log.debug(f'Loading model file {model_file} for targets {model_config["targets"]}.')
 
                     # Necessary to free memory after prediction.
@@ -128,17 +132,19 @@ def main():
                         results.setdefault(target_name, {}).setdefault(method, {}).setdefault(model_config['fold'], preds.tolist())
 
     # RF.
-    if do_rf:
+    if not args.no_rf and False:
         for target_group in config['methods']['rf']:
             log.debug(f'Target group {target_group}.')
 
-            for model_config in config['methods']['rf'][target_group]:
+            for i, model_config in enumerate(config['methods']['rf'][target_group]):
+                log.info(f'Running model {i+1} of {len(config["methods"]["rf"][target_group])} for method rf and target {model_config["targets"]}')
+
                 log.debug(f'Model config: {model_config}.')
                 data = pd.concat(prepare_data(seq, pssm, window=model_config['window_size']), axis=1)
 
                 target = allestm.utils.name_to_feature(f'allestm.features.{model_config["targets"]}')
 
-                model_file = f'models/{model_config["model_file"]}'
+                model_file = f'{model_dir}/{model_config["model_file"]}'
                 log.debug(f'Loading model file {model_file} for target {target}.')
                 model = joblib.load(model_file)
 
@@ -156,17 +162,19 @@ def main():
                 results.setdefault(model_config['targets'], {}).setdefault('rf', {}).setdefault(model_config['fold'], predictions.tolist())
 
     # XGB.
-    if do_xgb:
+    if not args.no_xgb and False:
         for target_group in config['methods']['xgb']:
             log.debug(f'Target group {target_group}.')
 
-            for model_config in config['methods']['xgb'][target_group]:
+            for i, model_config in enumerate(config['methods']['xgb'][target_group]):
+                log.info(f'Running model {i+1} of {len(config["methods"]["xgb"][target_group])} for method xgb and target {model_config["targets"]}')
+
                 log.debug(f'Model config: {model_config}.')
                 data = pd.concat(prepare_data(seq, pssm, window=model_config['window_size']), axis=1)
 
                 target = allestm.utils.name_to_feature(f'allestm.features.{model_config["targets"]}')
 
-                model_file = f'models/{model_config["model_file"]}'
+                model_file = f'{model_dir}/{model_config["model_file"]}'
                 log.debug(f'Loading model file {model_file} for target {target}.')
 
                 model = xgb.Booster({'nthread': multiprocessing.cpu_count()})
@@ -182,26 +190,20 @@ def main():
     with open('tmp.json', 'r') as fh:
         results = json.load(fh)
 
-# ["lstm_", "cnn_", "dcnn_", "rf_", "xgb_"]
-# * 5 folds
-# blending
-# avg
-# x targets
-
-
-
     # Blending
-    if do_blending:
+    if not args.no_dl and not args.no_rf and not args.no_xgb:
         for target_group in config['methods']['blending']:
             log.debug(f'Target group {target_group}.')
 
-            for model_config in config['methods']['blending'][target_group]:
+            for i, model_config in enumerate(config['methods']['blending'][target_group]):
+                log.info(f'Running model {i+1} of {len(config["methods"]["blending"][target_group])} for method blending and target {model_config["targets"]}')
+
                 log.debug(f'Model config: {model_config}.')
                 data = np.column_stack([np.array(results[model_config['targets']][method][str(model_config['fold'])]) for method in ['cnn', 'dcnn', 'lstm', 'rf', 'xgb']])
 
                 target = allestm.utils.name_to_feature(f'allestm.features.{model_config["targets"]}')
 
-                model_file = f'models/{model_config["model_file"]}'
+                model_file = f'{model_dir}/{model_config["model_file"]}'
                 log.debug(f'Loading model file {model_file} for target {target}.')
                 model = joblib.load(model_file)
 
@@ -212,14 +214,25 @@ def main():
 
                 results.setdefault(model_config['targets'], {}).setdefault('blending', {}).setdefault(model_config['fold'], predictions.tolist())
 
-    # Avg
-    if do_avg:
+        # Avg
         for target in results:
             avg = np.sum([results[target]['blending'][x] for x in results[target]['blending']], axis=0)
             avg /= len(results[target]['blending'])
             results.setdefault(target, {}).setdefault('avg', avg.tolist())
 
-    print(results)
+    # Rounding
+    for target in results:
+        for method in results[target]:
+            if method == 'avg':
+                results[target][method] = np.round(results[target][method], args.decimals).tolist()
+            else:
+                for fold in results[target][method]:
+                    results[target][method][fold] = np.round(results[target][method][fold], args.decimals).tolist()
+
+    # Output
+    with open(args.out, 'w') as fh:
+        json.dump(results, fh)
+
 
 if __name__ == '__main__':
     main()

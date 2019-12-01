@@ -4,31 +4,27 @@ import pathlib
 import logging
 
 
-def parse_fasta(filename):
-    """Parse a (single sequence) fasta file.
+def parse_a3m(filename):
+    """Parse a a3m fasta file.
 
     Parameters
     ----------
     filename : string
-        The fasta file.
+        The a3m file.
 
     Returns
     -------
-    np.array
-        Sequence in an [n, 1] np.array.
+    tuple :
+        (Sequence in an [n, 1] np.array, MSA in an [1, 1] np.array)
     """
+    content = pathlib.Path(filename).read_text()
+
     seq = ''
-    with open(filename, 'r') as fh:
-        for line in fh:
-            if line.startswith('>'):
-                if len(seq) > 0:
-                    logging.warning('FASTA file contains more than one sequence, will only use the first one and discard the others.')
-                    break
-            else:
-                seq += line.strip().upper()
+    for line in content.split('\n'):
+        if line.startswith('>'):
+            if len(seq) > 0:
+                break
+        else:
+            seq += line.strip().upper()
 
-    return np.array([[x] for x in list(seq)])
-
-
-def parse_a3m(filename):
-    return np.array([[pathlib.Path(filename).read_text()]])
+    return (np.array([[x] for x in list(seq)]), np.array([[content]]))
