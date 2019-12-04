@@ -12,6 +12,7 @@ sklearn = "*"
 pandas = "*"
 xgboost = "*"
 tensorflow = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"

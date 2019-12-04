@@ -6,6 +6,8 @@ import pandas as pd
 import joblib
 import multiprocessing
 import keras
+import pathlib
+import requests
 
 import numpy as np
 
@@ -30,7 +32,7 @@ def parse_args(argv):
     parser.add_argument('a3m', help='MSA in a3m format.')
     parser.add_argument('out', help='Output file (JSON).')
 
-    parser.add_argument('-m', '--model-dir', default='./models', help='Model dir.')
+    parser.add_argument('-m', '--model-dir', help='Model dir.')
     parser.add_argument('-c', '--config', help='Config file.')
 
     parser.add_argument('-d', '--decimals', type=int, default=3, help='Number of decimals the final result is rounded to.')
@@ -58,20 +60,37 @@ def prepare_data(seq, pssm, window=0):
     return feature_dfs
 
 
+def download_model(s3_path, model_dir, model_filename):
+    if not (model_dir / model_filename).exists():
+        print(f'Model {model_filename} not present in {model_dir}, downloading from {s3_path}.')
+        url = f'{s3_path}{model_filename}'
+        r = requests.get(url)
+        with open(model_dir / model_filename, 'wb') as fh:
+            fh.write(r.content)
+
+
 def main():
     args = parse_args(sys.argv[1:])
 
-    model_dir = args.model_dir
+    if args.config is None:
+        config_file = pathlib.Path(__file__).parent / 'config.json'
+    else:
+        config_file = pathlib.Path(args.config)
 
     # Parsing config.
     log.debug('Parsing config file.')
-    with open(args.config, 'r') as config_fh:
+    with open(config_file, 'r') as config_fh:
         config = json.load(config_fh)
+
+    if args.config is None:
+        model_dir = pathlib.Path(__file__).parent / 'models/'
+        model_dir.mkdir(parents=True, exist_ok=True)
+    else:
+        model_dir = args.model_dir
 
     # Parsing a3m file.
     log.debug('Parsing a3m.')
     fasta, a3m = allestm.parsers.parse_a3m(args.a3m)
-    print(fasta)
 
     seq_transformer = allestm.features.categorical.Sequence()
     seq = seq_transformer.transform(fasta)
@@ -82,7 +101,7 @@ def main():
     results = {}
 
     # DL.
-    if not args.no_dl and False:
+    if not args.no_dl:
         def run_dl(seq, pssm, model_file, queue):
             model = keras.models.load_model(model_file)
             predictions = model.predict([dl_seq_data, dl_pssm_data])
@@ -101,12 +120,13 @@ def main():
                 log.debug(f'Target group {target_group}.')
 
                 for i, model_config in enumerate(config['methods'][method][target_group]):
-                    log.info(f'Running model {i+1} of {len(config["methods"][method][target_group])} for method {method} and target {model_config["targets"]}')
+                    print(f'Running model {i+1} of {len(config["methods"][method][target_group])} for method {method} and target {model_config["targets"]}')
 
                     log.debug(f'Model config: {model_config}.')
                     queue = multiprocessing.SimpleQueue()
 
-                    model_file = f'{model_dir}/{model_config["model_file"]}'
+                    model_file = model_dir / model_config["model_file"]
+                    download_model(config['config']['s3_path'], model_dir, model_config['model_file'])
                     log.debug(f'Loading model file {model_file} for targets {model_config["targets"]}.')
 
                     # Necessary to free memory after prediction.
@@ -132,19 +152,20 @@ def main():
                         results.setdefault(target_name, {}).setdefault(method, {}).setdefault(model_config['fold'], preds.tolist())
 
     # RF.
-    if not args.no_rf and False:
+    if not args.no_rf:
         for target_group in config['methods']['rf']:
             log.debug(f'Target group {target_group}.')
 
             for i, model_config in enumerate(config['methods']['rf'][target_group]):
-                log.info(f'Running model {i+1} of {len(config["methods"]["rf"][target_group])} for method rf and target {model_config["targets"]}')
+                print(f'Running model {i+1} of {len(config["methods"]["rf"][target_group])} for method rf and target {model_config["targets"]}')
 
                 log.debug(f'Model config: {model_config}.')
                 data = pd.concat(prepare_data(seq, pssm, window=model_config['window_size']), axis=1)
 
                 target = allestm.utils.name_to_feature(f'allestm.features.{model_config["targets"]}')
 
-                model_file = f'{model_dir}/{model_config["model_file"]}'
+                model_file = model_dir / model_config["model_file"]
+                download_model(config['config']['s3_path'], model_dir, model_config['model_file'])
                 log.debug(f'Loading model file {model_file} for target {target}.')
                 model = joblib.load(model_file)
 
@@ -162,19 +183,20 @@ def main():
                 results.setdefault(model_config['targets'], {}).setdefault('rf', {}).setdefault(model_config['fold'], predictions.tolist())
 
     # XGB.
-    if not args.no_xgb and False:
+    if not args.no_xgb:
         for target_group in config['methods']['xgb']:
             log.debug(f'Target group {target_group}.')
 
             for i, model_config in enumerate(config['methods']['xgb'][target_group]):
-                log.info(f'Running model {i+1} of {len(config["methods"]["xgb"][target_group])} for method xgb and target {model_config["targets"]}')
+                print(f'Running model {i+1} of {len(config["methods"]["xgb"][target_group])} for method xgb and target {model_config["targets"]}')
 
                 log.debug(f'Model config: {model_config}.')
                 data = pd.concat(prepare_data(seq, pssm, window=model_config['window_size']), axis=1)
 
                 target = allestm.utils.name_to_feature(f'allestm.features.{model_config["targets"]}')
 
-                model_file = f'{model_dir}/{model_config["model_file"]}'
+                model_file = model_dir / model_config["model_file"]
+                download_model(config['config']['s3_path'], model_dir, model_config['model_file'])
                 log.debug(f'Loading model file {model_file} for target {target}.')
 
                 model = xgb.Booster({'nthread': multiprocessing.cpu_count()})
@@ -187,8 +209,8 @@ def main():
 
                 results.setdefault(model_config['targets'], {}).setdefault('xgb', {}).setdefault(model_config['fold'], predictions.tolist())
 
-    with open('tmp.json', 'r') as fh:
-        results = json.load(fh)
+    #with open('tmp.json', 'r') as fh:
+        #results = json.load(fh)
 
     # Blending
     if not args.no_dl and not args.no_rf and not args.no_xgb:
@@ -196,14 +218,15 @@ def main():
             log.debug(f'Target group {target_group}.')
 
             for i, model_config in enumerate(config['methods']['blending'][target_group]):
-                log.info(f'Running model {i+1} of {len(config["methods"]["blending"][target_group])} for method blending and target {model_config["targets"]}')
+                print(f'Running model {i+1} of {len(config["methods"]["blending"][target_group])} for method blending and target {model_config["targets"]}')
 
                 log.debug(f'Model config: {model_config}.')
                 data = np.column_stack([np.array(results[model_config['targets']][method][str(model_config['fold'])]) for method in ['cnn', 'dcnn', 'lstm', 'rf', 'xgb']])
 
                 target = allestm.utils.name_to_feature(f'allestm.features.{model_config["targets"]}')
 
-                model_file = f'{model_dir}/{model_config["model_file"]}'
+                model_file = model_dir / model_config["model_file"]
+                download_model(config['config']['s3_path'], model_dir, model_config['model_file'])
                 log.debug(f'Loading model file {model_file} for target {target}.')
                 model = joblib.load(model_file)
 

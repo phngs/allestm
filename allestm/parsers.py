@@ -25,6 +25,6 @@ def parse_a3m(filename):
             if len(seq) > 0:
                 break
         else:
-            seq += line.strip().upper()
+            seq += line.strip().upper().replace('-', '')
 
     return (np.array([[x] for x in list(seq)]), np.array([[content]]))
