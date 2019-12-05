@@ -17,7 +17,7 @@ make -j 4 && make install
 ```
 
 After installation, a database can be downloaded from
-[here](http://gwdu111.gwdg.de/~compbiol/uniclust/2018_08/uniclust30_2018_08_hhsuite.tar.gz).
+[here](http://gwdu111.gwdg.de/~compbiol/uniclust/2018_08/uniclust30_2018_08_hhsuite.tar.gz). Make sure you check for the lastest version [here](https://uniclust.mmseqs.com/).
 
 After extracting the database using `tar -xvf uniclust30_2018_08_hhsuite.tar.gz`, HHblits can be run with the following command:
 
@@ -69,6 +69,12 @@ The model files will be downloaded automatically (about 11 GB) if allestm does n
   network, so that allestm can be run on a cluster.
 
 ## Usage
+To get information about the command line options call:
+
+```
+allestm -h
+```
+
 Allestm can be run using the following command:
 
 ```
