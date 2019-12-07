@@ -28,7 +28,10 @@ log = logging.getLogger()
 
 
 def parse_args(argv):
-    parser = ArgumentParser(description='')
+    parser = ArgumentParser(
+        description='Predicting various structural features of transmembrane proteins. For detailed instructions visit https://github.com/phngs/allestm.',
+        epilog=f'To run the example type: allestm {pathlib.Path(__file__).parent}/examples/1fx8_A.a3m output.json'
+    )
     parser.add_argument('a3m', help='MSA in a3m format.')
     parser.add_argument('out', help='Output file (JSON).')
 
@@ -82,7 +85,7 @@ def main():
     with open(config_file, 'r') as config_fh:
         config = json.load(config_fh)
 
-    if args.config is None:
+    if args.model_dir is None:
         model_dir = pathlib.Path(__file__).parent / 'models/'
         model_dir.mkdir(parents=True, exist_ok=True)
     else:
@@ -91,6 +94,10 @@ def main():
     # Parsing a3m file.
     log.debug('Parsing a3m.')
     fasta, a3m = allestm.parsers.parse_a3m(args.a3m)
+
+    if len(fasta) > config['config']['max_length']:
+        print(f'The sequence cannot be longer than {config["config"]["max_length"]} amino acids.')
+        exit(1)
 
     seq_transformer = allestm.features.categorical.Sequence()
     seq = seq_transformer.transform(fasta)
@@ -199,8 +206,8 @@ def main():
                 download_model(config['config']['s3_path'], model_dir, model_config['model_file'])
                 log.debug(f'Loading model file {model_file} for target {target}.')
 
-                model = xgb.Booster({'nthread': multiprocessing.cpu_count()})
-                model.load_model(model_file)
+                model = xgb.Booster({'nthread': 1})
+                model.load_model(str(model_file))
 
                 predictions = model.predict(xgb.DMatrix(data), ntree_limit=int(model.attributes()['best_iteration']) + 1)
 
@@ -208,9 +215,6 @@ def main():
                     predictions = target.inverse_transform(predictions)
 
                 results.setdefault(model_config['targets'], {}).setdefault('xgb', {}).setdefault(model_config['fold'], predictions.tolist())
-
-    #with open('tmp.json', 'r') as fh:
-        #results = json.load(fh)
 
     # Blending
     if not args.no_dl and not args.no_rf and not args.no_xgb:
@@ -221,7 +225,7 @@ def main():
                 print(f'Running model {i+1} of {len(config["methods"]["blending"][target_group])} for method blending and target {model_config["targets"]}')
 
                 log.debug(f'Model config: {model_config}.')
-                data = np.column_stack([np.array(results[model_config['targets']][method][str(model_config['fold'])]) for method in ['cnn', 'dcnn', 'lstm', 'rf', 'xgb']])
+                data = np.column_stack([np.array(results[model_config['targets']][method][model_config['fold']]) for method in ['cnn', 'dcnn', 'lstm', 'rf', 'xgb']])
 
                 target = allestm.utils.name_to_feature(f'allestm.features.{model_config["targets"]}')
 
